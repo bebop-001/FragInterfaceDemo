@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center_horizontal"
+	android:orientation="vertical"
+	tools:context="${packageName}.${activityClass}" >
+
+	<LinearLayout
+		android:id="@+id/actifivity_wrapper"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_gravity="center|top"
+		android:layout_weight="2" >
+
+		<EditText
+			android:id="@+id/hello_text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="top"
+			android:hint="@string/input_text"
+			android:text="@string/hello_world"
+			android:textSize="30sp" />
+	</LinearLayout>
+
+	<fragment
+		android:id="@+id/fragment1"
+		android:name="com.example.fraginterfacedemo.SideFragment"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_gravity="center"
+		android:layout_weight="1"
+		tools:layout="@layout/side_layout" />
+
+	<fragment
+		android:id="@+id/fragment"
+		android:name="com.example.fraginterfacedemo.SideFragment"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_gravity="center"
+		android:layout_weight="1"
+		tools:layout="@layout/side_layout" />
+
+</LinearLayout>
